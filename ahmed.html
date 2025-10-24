@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -190,6 +191,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="admin-dashboard">
         <div class="dashboard-header">
@@ -254,32 +256,22 @@
             </div>
         </div>
 
-                <div class="command-section">
+        <div class="command-section">
             <div class="command-header">
                 <div class="command-title">
-                    <i class="fas fa-terminal"></i>
-                    <h2>Activate Windows 8, 8.1, 10 and 11 Pro for Free</h2>
+                    <i class="fas fa-link"></i>
+                    <h2>MD Software Files (MEGA Link)</h2>
                 </div>
             </div>
             <div class="command-box">
-                <p class="command-text">slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX</p>
-                <button class="copy-btn" onclick="copyCommand(this)">
-                    <i class="fas fa-copy"></i> Copy
-                </button>
-            </div>
-            <div class="command-box">
-                <p class="command-text">slmgr /skms kms8.msguides.com</p>
-                <button class="copy-btn" onclick="copyCommand(this)">
-                    <i class="fas fa-copy"></i> Copy
-                </button>
-            </div>
-            <div class="command-box">
-                <p class="command-text">slmgr /ato</p>
-                <button class="copy-btn" onclick="copyCommand(this)">
-                    <i class="fas fa-copy"></i> Copy
-                </button>
+                <p class="command-text">https://mega.nz/folder/NZknDYrA#KlV5ksYumrOSL50-Iwjp3g</p>
+                <a href="https://mega.nz/folder/NZknDYrA#KlV5ksYumrOSL50-Iwjp3g" target="_blank" class="dashboard-btn">
+                    <i class="fas fa-external-link-alt"></i> Open Link
+                </a>
             </div>
         </div>
+
+
         
         <div class="info-section">
             <div class="command-title">
@@ -311,7 +303,7 @@
         // Copy command function with fallback
         function copyCommand(button) {
             const commandText = button.previousElementSibling.textContent;
-            
+
             // Try using the new clipboard API first
             if (navigator.clipboard && window.isSecureContext) {
                 navigator.clipboard.writeText(commandText)
@@ -331,7 +323,7 @@
             textArea.style.opacity = '0';
             document.body.appendChild(textArea);
             textArea.select();
-            
+
             try {
                 document.execCommand('copy');
                 showCopySuccess(button);
@@ -339,7 +331,7 @@
                 console.error('Failed to copy text:', err);
                 alert('Failed to copy. Please try selecting and copying manually.');
             }
-            
+
             document.body.removeChild(textArea);
         }
 
@@ -348,7 +340,7 @@
             const originalText = button.innerHTML;
             button.innerHTML = '<i class="fas fa-check"></i> Copied!';
             button.style.backgroundColor = '#4CAF50';
-            
+
             setTimeout(() => {
                 button.innerHTML = originalText;
                 button.style.backgroundColor = '';
@@ -356,4 +348,5 @@
         }
     </script>
 </body>
+
 </html>
